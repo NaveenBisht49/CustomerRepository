@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Project_1.ViewModel.CustomerViewModel
+@{
+    <div class="container">
+        <div><h1>Customer Form</h1></div>
+        <hr />
+        <div class="mt-4">
+                    <div class="row mt-3">
+                        <label class="col-4">Phone number</label>
+                        <label class="col-4">@Model.Customer.PhoneNumber</label>
+                    </div>
+                    <div class="row mt-3">
+                        <label class="col-4">Name</label>
+                        <label class ="col-4">@Model.Customer.Name</label>
+                    </div>
+                    <div class="row mt-3">
+                        <label class="col-4">City</label>
+                        <label class="col-4">@Model.Customer.City</label>
+                    </div>
+                    <div class="row mt-3">
+                        <label class="col-4" >State</label>
+                        <label class="col-4">@Model.Customer.State</label>
+                    </div>
+                    <div class="row mt-3">
+                        <label class="col-4">Aadhar Number</label>
+                        <label class="col-4">@Model.Customer.Aadhar_Number</label>
+                    </div>
+            <div class="row mt-3">
+                <label class="col-4">Aadhar front Image</label>
+                <div class="col-4">
+                    <img src="~/Image/@(Model.Customer.Aadhar_frontpath)" asp-append-version="true" width="200px" height="200px" alt="Image Not Available" class="img-fluid" />
+                </div>
+            </div>
+
+            <div class="row mt-3">
+                <label class="col-4">Aadhar Back Image</label>
+                <div class="col-4">
+                    <img src="~/Image/@(Model.Customer.Aadhar_backpath)" asp-append-version="true" width="200px" height="200px" alt="Image Not Available" class="img-fluid" />
+                </div>
+            </div>
+
+                    <div class="row mt-3">
+                        <label class="col-4">Submitted Amount</label>
+                        <label class="col-4">
+                            @Model.Order.amount
+                        </label>
+                    </div>
+
+            <div class="row mt-3 ">
+                <button class="btn btn-primary col-2 " onclick="window.print()">Print</button>
+                <button class="btn btn-primary col-2 " asp-action="Index" asp-asp-controller="Customer"> Go to Customer </button>
+                
+            </div>
+                </div>
+            </div>
+}

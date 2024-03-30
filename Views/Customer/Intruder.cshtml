@@ -1,0 +1,45 @@
+﻿@model CustomerModel
+<div class="container">
+    <div><h1>Intruder Form</h1></div>
+    <hr />
+    <div class="mt-4">
+        <form method="post" enctype="multipart/form-data">
+            <div class="mt-4">
+                <div class="row mt-3">
+                    <label class="col-4" asp-for="PhoneNumber">Phone number</label>
+                    <input asp-for="PhoneNumber" class="form-control-sm col-4" />
+                </div>
+                <div class="row mt-3">
+                    <label class="col-4" asp-for="Name">Name</label>
+                    <input class="form-control-sm col-4" asp-for="Name" />
+                </div>
+                <div class="row mt-3">
+                    <label class="col-4" asp-for="City">City</label>
+                    <input class="form-control-sm col-4" asp-for="City" />
+                </div>
+                <div class="row mt-3">
+                    <label class="col-4" asp-for="State">State</label>
+                    <input class="form-control-sm col-4" asp-for="State" />
+                </div>
+                <div class="row mt-3">
+                    <label class="col-4" asp-for="Aadhar_Number">Aadhar Number</label>
+                    <input class="form-control-sm col-4" asp-for="Aadhar_Number" />
+                </div>
+                <div class="row mt-3">
+                    <label asp-for="Aadhar_front">Aadhar front Image</label>
+                    <input asp-for="Aadhar_front" accept="image/*">
+                </div>
+
+                <div class="row mt-3">
+                    <label asp-for="Aadhar_Back">Aadhar Back Image</label>
+                    <input asp-for="Aadhar_Back" accept="image/*" />
+                </div>
+
+                <div class="row mt-3 ">
+                    <button class="btn btn-primary col-2 me-2 " type="submit">Save and Next</button>
+                    <button class=" btn btn-primary col-1 ms-2" type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
